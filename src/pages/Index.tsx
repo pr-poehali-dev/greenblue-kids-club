@@ -11,21 +11,24 @@ const Index = () => {
       description: "Развиваем критическое мышление и учим задавать правильные вопросы о жизни",
       icon: "Brain",
       color: "bg-gradient-to-br from-club-green to-club-teal",
-      age: "6-14 лет"
+      age: "6-14 лет",
+      image: "/img/61e28725-6cb0-4754-ae04-c60aa1cd3ee7.jpg"
     },
     {
       title: "Биографии великих людей",
       description: "Изучаем истории успеха и жизненные уроки выдающихся личностей",
       icon: "BookOpen",
       color: "bg-gradient-to-br from-club-teal to-club-cyan",
-      age: "5-16 лет"
+      age: "5-16 лет",
+      image: "/img/968a7c8a-bfa1-45ac-93ef-c832991214a1.jpg"
     },
     {
       title: "Этикет и правила поведения",
       description: "Учим хорошим манерам и правилам общения в обществе",
       icon: "Users",
       color: "bg-gradient-to-br from-club-cyan to-club-green",
-      age: "4-16 лет"
+      age: "4-16 лет",
+      image: "/img/e4343e4d-8c2c-4722-a4b3-8b8df47ff676.jpg"
     }
   ];
 
@@ -80,38 +83,52 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12 text-center animate-fade-in">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-montserrat font-bold mb-6 bg-gradient-to-r from-club-green via-club-teal to-club-cyan bg-clip-text text-transparent">
-            Всестороннее развитие для детей
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Онлайн-клуб, где дети изучают философию, биографии великих людей и правила этикета. 
-            Развиваем критическое мышление, эмпатию и культуру общения в дружественной атмosphere.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Badge variant="secondary" className="px-4 py-2 text-sm">
-              <Icon name="Users" size={16} className="mr-2" />
-              300+ учеников
-            </Badge>
-            <Badge variant="secondary" className="px-4 py-2 text-sm">
-              <Icon name="Award" size={16} className="mr-2" />
-              5 лет опыта
-            </Badge>
-            <Badge variant="secondary" className="px-4 py-2 text-sm">
-              <Icon name="Star" size={16} className="mr-2" />
-              4.9 рейтинг
-            </Badge>
+      <section className="container mx-auto px-4 py-12 animate-fade-in">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
+            <h2 className="text-5xl font-montserrat font-bold mb-6 bg-gradient-to-r from-club-green via-club-teal to-club-cyan bg-clip-text text-transparent">
+              Всестороннее развитие для детей
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Онлайн-клуб, где дети изучают философию, биографии великих людей и правила этикета. 
+              Развиваем критическое мышление, эмпатию и культуру общения в дружественной атмосфере.
+            </p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+              <Badge variant="secondary" className="px-4 py-2 text-sm">
+                <Icon name="Users" size={16} className="mr-2" />
+                300+ учеников
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm">
+                <Icon name="Award" size={16} className="mr-2" />
+                5 лет опыта
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 text-sm">
+                <Icon name="Star" size={16} className="mr-2" />
+                4.9 рейтинг
+              </Badge>
+            </div>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+              <Button size="lg" className="bg-gradient-to-r from-club-green to-club-teal hover:opacity-90 px-8 py-3">
+                <Icon name="Play" size={20} className="mr-2" />
+                Пробное занятие
+              </Button>
+              <Button size="lg" variant="outline" className="border-club-green text-club-green hover:bg-club-green hover:text-white px-8 py-3">
+                <Icon name="Calendar" size={20} className="mr-2" />
+                Расписание
+              </Button>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-club-green to-club-teal hover:opacity-90 px-8 py-3">
-              <Icon name="Play" size={20} className="mr-2" />
-              Пробное занятие
-            </Button>
-            <Button size="lg" variant="outline" className="border-club-green text-club-green hover:bg-club-green hover:text-white px-8 py-3">
-              <Icon name="Calendar" size={20} className="mr-2" />
-              Расписание
-            </Button>
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/img/7457361c-7783-4769-878f-be748e3d8d98.jpg" 
+                alt="Дети изучают и развиваются" 
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-club-green to-club-teal rounded-full opacity-20"></div>
+            <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-club-cyan to-club-teal rounded-full opacity-30"></div>
           </div>
         </div>
       </section>
@@ -124,8 +141,15 @@ const Index = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {educationalSections.map((section, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 animate-scale-in border-0 shadow-lg overflow-hidden">
-              <div className={`h-32 ${section.color} relative flex items-center justify-center`}>
-                <Icon name={section.icon as any} size={48} className="text-white drop-shadow-lg" />
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={section.image} 
+                  alt={section.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className={`absolute inset-0 ${section.color} opacity-80 flex items-center justify-center`}>
+                  <Icon name={section.icon as any} size={48} className="text-white drop-shadow-lg" />
+                </div>
                 <Badge className="absolute top-4 right-4 bg-white/20 text-white border-white/30">
                   {section.age}
                 </Badge>
